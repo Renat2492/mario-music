@@ -26,11 +26,35 @@ input.onButtonPressed(Button.A, function () {
 })
 music.setTempo(250)
 control.inBackground(function () {
-    basic.showLeds(`
-        . . . . .
-        . . . . .
-        . . . . .
-        . . . . .
-        . . . . .
-        `)
+    while (true) {
+        basic.showLeds(`
+            . . . . .
+            . # # # .
+            # # # # #
+            . # # # .
+            # # . # #
+            `)
+        basic.pause(100)
+        basic.showLeds(`
+            . # # # .
+            # . . . #
+            . # # # .
+            . # # # .
+            # # . # #
+            `)
+        basic.showLeds(`
+            . . . . .
+            . # # # .
+            # # # # #
+            . # # # .
+            # # . # #
+            `)
+        basic.showLeds(`
+            . # # # .
+            # . . . #
+            . # # # .
+            . # # # .
+            # # . # #
+            `)
+    }
 })
